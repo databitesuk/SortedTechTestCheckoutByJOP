@@ -4,3 +4,5 @@
 
 /TechTestCheckout/TechTestCheckout/.vs/TechTestCheckout/v16
 /TechTestCheckout/TechTestCheckout/obj
+/TechTestCheckout/AOP/obj
+/TechTestCheckout/AOP/bin/Debug/netcoreapp3.1
