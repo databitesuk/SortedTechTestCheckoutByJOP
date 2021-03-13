@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTestCheckout", "TechTestCheckout.csproj", "{30FB4090-A7C4-44B1-ACFD-2A52DFEC1EFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechTestCheckout", "TechTestCheckout.csproj", "{30FB4090-A7C4-44B1-ACFD-2A52DFEC1EFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AOP", "..\AOP\AOP.csproj", "{0587DA1C-1B6E-434A-8394-9816F0ABE70E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AOP", "..\AOP\AOP.csproj", "{0587DA1C-1B6E-434A-8394-9816F0ABE70E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLayer", "..\ServiceLayer\ServiceLayer.csproj", "{1426BE8C-2A0B-4303-A1A9-CB19B6BF7252}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{0587DA1C-1B6E-434A-8394-9816F0ABE70E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0587DA1C-1B6E-434A-8394-9816F0ABE70E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0587DA1C-1B6E-434A-8394-9816F0ABE70E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1426BE8C-2A0B-4303-A1A9-CB19B6BF7252}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1426BE8C-2A0B-4303-A1A9-CB19B6BF7252}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1426BE8C-2A0B-4303-A1A9-CB19B6BF7252}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1426BE8C-2A0B-4303-A1A9-CB19B6BF7252}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

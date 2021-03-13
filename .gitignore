@@ -6,3 +6,7 @@
 /TechTestCheckout/TechTestCheckout/obj
 /TechTestCheckout/AOP/obj
 /TechTestCheckout/AOP/bin/Debug/netcoreapp3.1
+/TechTestCheckout/TechTestCheckout/.vs/TechTestCheckout/DesignTimeBuild
+/TechTestCheckout/ServiceLayer/bin/Debug/netcoreapp3.1
+/TechTestCheckout/ServiceLayer/obj
+/TechTestCheckout/TechTestCheckout/bin/Debug/netcoreapp3.1
