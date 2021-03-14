@@ -11,8 +11,12 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using ServiceLayer.Repositories;
 using ServiceLayer.Repositories.Interfaces;
+using ServiceLayer.Repositories.SpecialOffers;
+using ServiceLayer.Repositories.SpecialOffers.Interfaces;
 using ServiceLayer.Services;
 using ServiceLayer.Services.Interfaces;
+using ServiceLayer.Services.SpecialOffers;
+using ServiceLayer.Services.SpecialOffers.Interfaces;
 
 namespace TechTestCheckout
 {
@@ -44,6 +48,9 @@ namespace TechTestCheckout
             services.AddScoped<IItemService, ItemService>();
             services.AddScoped<IItemRepository, ItemRepository>();
             services.AddScoped<ICheckoutRepository, CheckoutRepository>();
+            // Special Offers
+            services.AddScoped<ISpecialOfferItemService, SpecialOfferItemService>();
+            services.AddScoped<ISpecialOfferItemRepository, SpecialOfferItemRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
