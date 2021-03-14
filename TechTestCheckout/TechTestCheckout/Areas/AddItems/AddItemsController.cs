@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AOP.PostSharp.Aspects;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ServiceLayer.Services.Interfaces;
@@ -12,6 +13,8 @@ namespace TechTestCheckout.Areas.AddItems
 {
     [ApiController]
     [Route("[controller]")]
+    [LogOnSuccess]
+    [LogOnException]
     public class AddItemsController : ControllerBase
     {
         private readonly IItemService _itemService;

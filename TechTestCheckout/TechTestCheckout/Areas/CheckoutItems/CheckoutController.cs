@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AOP.PostSharp.Aspects;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ServiceLayer.Repositories.Interfaces;
@@ -12,6 +13,8 @@ namespace TechTestCheckout.Areas.CheckoutItems
 {
     [Route("[controller]")]
     [ApiController]
+    [LogOnSuccess]
+    [LogOnException]
     public class CheckoutController : ControllerBase
     {
         private readonly ICheckoutRepository _checkoutRepository;
