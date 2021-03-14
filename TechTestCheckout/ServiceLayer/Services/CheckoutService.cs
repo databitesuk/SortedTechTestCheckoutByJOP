@@ -23,9 +23,9 @@ namespace ServiceLayer.Services
             return _checkoutRepository.ScanAnItemAtCheckout(sku);
         }
 
-        public decimal RequestTotal(IEnumerable<Checkout> checkout)
+        public decimal RequestTotal()
         {
-            return _checkoutRepository.RequestTotal(checkout);
+            return _checkoutRepository.RequestTotal();
         }
     }
 }

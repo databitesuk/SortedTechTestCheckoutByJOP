@@ -26,7 +26,7 @@ namespace ServiceLayer.Repositories
                 DataList.Checkout.Add(
                     Checkout.Create(item.SKU, item.ItemName, 1, item.UnitPrice)
                     );
-                return DataList.Checkout.Count;
+                return 1;
             }
             else
             {
@@ -34,7 +34,7 @@ namespace ServiceLayer.Repositories
             }
         }
 
-        public decimal RequestTotal(IEnumerable<Checkout> checkout)
+        public decimal RequestTotal()
         {
             return DataList.Checkout.Sum(it => it.TotalPrice);
         }

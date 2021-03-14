@@ -8,6 +8,6 @@ namespace ServiceLayer.Services.Interfaces
     public interface ICheckoutService
     {
         int ScanAnItemAtCheckout(string sku);
-        decimal RequestTotal(IEnumerable<Checkout> checkout);
+        decimal RequestTotal();
     }
 }

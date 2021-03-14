@@ -16,7 +16,7 @@ namespace ServiceLayer.Repositories
             DataList.Items.Add(
                 Item.Create(sku, itemName, unitPrice)
                 );
-            return DataList.Items.Count;
+            return 1;
         }
 
         public Item GetItem(string sku)

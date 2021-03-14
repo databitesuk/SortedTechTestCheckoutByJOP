@@ -10,3 +10,5 @@
 /TechTestCheckout/ServiceLayer/bin/Debug/netcoreapp3.1
 /TechTestCheckout/ServiceLayer/obj
 /TechTestCheckout/TechTestCheckout/bin/Debug/netcoreapp3.1
+/TechTestCheckout/Tests/bin/Debug/netcoreapp3.1
+/TechTestCheckout/Tests/obj
