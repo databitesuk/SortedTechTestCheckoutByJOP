@@ -8,6 +8,9 @@ namespace ServiceLayer.Repositories.Interfaces
     public interface ICheckoutRepository
     {
         int ScanAnItemAtCheckout(string sku);
+
+        IEnumerable<Checkout> ListItemInCheckout();
+
         decimal RequestTotal();
     }
 }

@@ -23,6 +23,11 @@ namespace ServiceLayer.Services
             return _checkoutRepository.ScanAnItemAtCheckout(sku);
         }
 
+        public IEnumerable<Checkout> ListItemInCheckout()
+        {
+            return _checkoutRepository.ListItemInCheckout();
+        }
+
         public decimal RequestTotal()
         {
             return _checkoutRepository.RequestTotal();

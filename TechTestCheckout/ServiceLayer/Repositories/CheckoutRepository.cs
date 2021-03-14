@@ -34,6 +34,11 @@ namespace ServiceLayer.Repositories
             }
         }
 
+        public IEnumerable<Checkout> ListItemInCheckout()
+        {
+            return DataList.Checkout;
+        }
+
         public decimal RequestTotal()
         {
             return DataList.Checkout.Sum(it => it.TotalPrice);

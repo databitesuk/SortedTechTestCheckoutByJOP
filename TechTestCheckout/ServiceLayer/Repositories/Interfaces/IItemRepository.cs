@@ -10,5 +10,7 @@ namespace ServiceLayer.Repositories.Interfaces
         int AddItem(string sku, string itemName, decimal unitPrice);
 
         Item GetItem(string sku);
+
+        IEnumerable<Item> GetItems();
     }
 }

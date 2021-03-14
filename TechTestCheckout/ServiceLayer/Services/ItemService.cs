@@ -27,5 +27,10 @@ namespace ServiceLayer.Services
         {
             return _itemRepository.GetItem(sku);
         }
+
+        public IEnumerable<Item> GetItems()
+        {
+            return _itemRepository.GetItems();
+        }
     }
 }

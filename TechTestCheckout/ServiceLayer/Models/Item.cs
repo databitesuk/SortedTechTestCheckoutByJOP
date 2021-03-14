@@ -7,7 +7,7 @@ namespace ServiceLayer.Models
     public class Item
     {
         public string SKU { get; private set; }
-        public string ItemName { get; set; }
+        public string ItemName { get; private set; }
         public decimal UnitPrice { get; private set; }
 
         public static Item Create(string sku, string itemName, decimal unitPrice)

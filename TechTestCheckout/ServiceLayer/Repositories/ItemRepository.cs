@@ -25,5 +25,10 @@ namespace ServiceLayer.Repositories
                         .Where(it => it.SKU == sku)
                         .FirstOrDefault();
         }
+
+        public IEnumerable<Item> GetItems()
+        {
+            return DataList.Items;
+        }
     }
 }
