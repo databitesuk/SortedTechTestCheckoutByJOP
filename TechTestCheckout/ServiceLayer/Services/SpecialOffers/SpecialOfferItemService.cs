@@ -1,4 +1,5 @@
-﻿using ServiceLayer.Models.SpecialOffers;
+﻿using AOP.PostSharp.Aspects;
+using ServiceLayer.Models.SpecialOffers;
 using ServiceLayer.Repositories.SpecialOffers.Interfaces;
 using ServiceLayer.Services.SpecialOffers.Interfaces;
 using System;
@@ -7,6 +8,7 @@ using System.Text;
 
 namespace ServiceLayer.Services.SpecialOffers
 {
+    [LogOnException]
     public class SpecialOfferItemService : ISpecialOfferItemService
     {
         private readonly ISpecialOfferItemRepository _specialOfferItemRepository;

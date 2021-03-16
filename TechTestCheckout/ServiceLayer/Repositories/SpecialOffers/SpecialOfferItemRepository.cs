@@ -1,4 +1,5 @@
-﻿using ServiceLayer.Models.SpecialOffers;
+﻿using AOP.PostSharp.Aspects;
+using ServiceLayer.Models.SpecialOffers;
 using ServiceLayer.Repositories.SpecialOffers.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Text;
 
 namespace ServiceLayer.Repositories.SpecialOffers
 {
+    [LogOnException]
     public class SpecialOfferItemRepository : ISpecialOfferItemRepository
     {
         public int AddItem(string sku, int Quantity, decimal OfferPrice)

@@ -51,6 +51,8 @@ namespace TechTestCheckout
             // Special Offers
             services.AddScoped<ISpecialOfferItemService, SpecialOfferItemService>();
             services.AddScoped<ISpecialOfferItemRepository, SpecialOfferItemRepository>();
+            // Discounted Items
+            services.AddScoped<IDiscountAppliedItemRepository, DiscountAppliedItemRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

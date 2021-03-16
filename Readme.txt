@@ -19,7 +19,7 @@ Use GET /Checkout/RequestTotal to get the total price in checkout now
 Use POST /AddSpecialOffers to create special offers for items using sku
 Use GET /AddSpecialOffers to read back the current items offer
 
-4. In Checkout controller, use POST /Checkout to add an item again to checkout to see it's effect on the total price
+4. Again in Checkout controller, use POST /Checkout to add an item again to checkout to see it's effect on the total price
 
 5. Use GET /Checkout/RequestTotal to see the reduction in total price
 

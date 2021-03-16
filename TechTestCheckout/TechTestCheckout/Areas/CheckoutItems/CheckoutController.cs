@@ -6,6 +6,7 @@ using AOP.PostSharp.Aspects;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ServiceLayer.Repositories.Interfaces;
+using ServiceLayer.Repositories.SpecialOffers.Interfaces;
 using TechTestCheckout.Areas.CheckoutItems.Pro;
 using TechTestCheckout.Areas.CheckoutItems.View;
 
@@ -18,10 +19,12 @@ namespace TechTestCheckout.Areas.CheckoutItems
     public class CheckoutController : ControllerBase
     {
         private readonly ICheckoutRepository _checkoutRepository;
+        private readonly IDiscountAppliedItemRepository _discountAppliedItemRepository;
 
-        public CheckoutController(ICheckoutRepository checkoutRepository)
+        public CheckoutController(ICheckoutRepository checkoutRepository, IDiscountAppliedItemRepository discountAppliedItemRepository )
         {
             _checkoutRepository = checkoutRepository;
+            _discountAppliedItemRepository = discountAppliedItemRepository;
         }
 
         [HttpPost]
@@ -58,8 +61,34 @@ namespace TechTestCheckout.Areas.CheckoutItems
         [Route("RequestTotal")]
         public IActionResult RequestTotal()
         {
+            var items = _checkoutRepository.ListItemInCheckout();
+            var discountItems = _discountAppliedItemRepository.GetItems();
+
             var total = _checkoutRepository.RequestTotal();
-            return Ok($"Checkout Total: {total}");
+            var discountTotal = _discountAppliedItemRepository.RequestTotalDiscount();
+
+            var result = TotalRequestView.From(items, discountItems);
+
+            var resultView = $"{result}{Environment.NewLine}{Environment.NewLine}";
+            var footerView = $"CHECKOUT TOTAL: {total}{Environment.NewLine}DISCOUNTS APPLIED: {discountTotal}{Environment.NewLine}FINAL/NET TOTAL PRICE: {total - discountTotal}";
+
+            return Ok($"{resultView}{footerView}");
+        }
+
+        [HttpGet]
+        [Route("GetDiscountApplied")]
+        public IActionResult GetDiscountApplied()
+        {
+            var discountedItems = _discountAppliedItemRepository.GetItems();
+            var results = DiscountView.From(discountedItems);
+            if (results != null)
+            {
+                return Ok(results);
+            }
+            else
+            {
+                return Ok("No discount applied items at checkout !");
+            }
         }
 
     }

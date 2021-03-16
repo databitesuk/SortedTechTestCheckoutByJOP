@@ -12,6 +12,8 @@ namespace ServiceLayer.Models
         public decimal UnitPrice { get; private set; }
         public decimal TotalPrice { get; private set; }
 
+        public int DiscountApplied { get; private set; }
+
         public static Checkout Create(string sku, string itemName, int quantity, decimal unitPrice)
         {
             return new Checkout
@@ -22,6 +24,14 @@ namespace ServiceLayer.Models
                 UnitPrice = unitPrice,
                 TotalPrice = (quantity * unitPrice)
             };
+        }
+
+        public static void UpdateCheckout(List<Checkout> checkouts, int discountApplied )
+        {
+            foreach (var item in checkouts)
+            {
+                item.DiscountApplied = discountApplied;
+            }
         }
     }
 }
